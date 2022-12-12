@@ -9,10 +9,11 @@ class Director:
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
-        jumper (Jumper): The game's jumper.
-        is_playing (boolean): Whether or not to keep playing.
-        puzzle (Puzzle): The game's puzzle.
-        terminal_service: For getting and displaying information on the terminal.
+        _jumper (Jumper): The game's jumper.
+        _is_playing (boolean): Whether or not to keep playing.
+        _puzzle (Puzzle): The game's puzzle.
+        _terminal_service (TerminalService): For getting and displaying information on the terminal.
+        _guess (string): player's guess to solve the puzzle.
     """
 
     def __init__(self):
@@ -70,7 +71,7 @@ class Director:
             self._puzzle.update_solved()
         
     def _do_outputs(self):
-        """.
+        """Displays the Jumper, the Puzzle, and other messages to the player.
 
         Args:
             self (Director): An instance of Director.
