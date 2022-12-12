@@ -26,6 +26,9 @@ class Puzzle:
         
         Args:
             self (Puzzle): an instance of Puzzle.
+
+        Returns:
+            string: random secret word.
         """
         words = ['funny', 'lucky', 'avenue', 'banjo', 'buffalo', 'cycle', 'fluffy', 'exodus', 'gossip', 'injury', 'jazz', 'joking', 'juicy', 'luxury', 'nowadays', 'pixel', 'pajama', 'puppy', 'quiz', 'quorum', 'rhythm', 'staff', 'stretch', 'subway', 'unknown', 'unworthy', 'wave', 'wizard', 'youthful', 'zigzag', 'zombie', 'food', 'plant', 'apple']
 
@@ -37,6 +40,9 @@ class Puzzle:
         Args:
             self (Puzzle): an instance of Puzzle.
             word (string): the word to be hidden.
+
+        Returns:
+            string: word with its characters replaced by underscores.
         """
         hidden_word = ''
         for _ in range(len(word)):
@@ -49,6 +55,9 @@ class Puzzle:
         
         Args:
             self (Puzzle): an instance of Puzzle.
+        
+        Returns:
+            string: the secret word.
         """
         return self._word
 
@@ -57,6 +66,9 @@ class Puzzle:
         
         Args:
             self (Puzzle): an instance of Puzzle.
+        
+        Returns:
+            string: the secret word with its characters hidden.
         """
         return self._hidden_word
 
@@ -66,6 +78,9 @@ class Puzzle:
         Args:
             self (Puzzle): an instance of Puzzle.
             guess (string): a single letter representing the player's guess
+
+        Returns:
+            bool: True if the player's guess is correct, false if otherwise.
         """
         return guess in self._word
 
@@ -98,6 +113,9 @@ class Puzzle:
         
         Args:
             self (Puzzle): an instance of Puzzle.
+
+        Returns:
+            bool: True if the Puzzle has been solved, false if otherwise.
         """
         return self._is_solved
 

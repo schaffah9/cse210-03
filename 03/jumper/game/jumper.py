@@ -6,7 +6,7 @@ class Jumper:
     Attributes:
         _body (list[string]): the Jumper's body.
         _parachute (list[string]): the Jumper's parachute representing the amount of guesses remaining.
-        _is_alive (bool): whether the player has any remaining guesses  or not.
+        _is_alive (bool): whether the player has any remaining guesses or not.
     """
     
     def __init__(self):
@@ -24,6 +24,9 @@ class Jumper:
         
         Args:
             self (Jumper): an instance of Jumper.
+
+        Returns:
+            bool: True if Jumper has a piece of parachute attached, false if otherwise.
         """
         return len(self._parachute) > 0
 
@@ -32,6 +35,8 @@ class Jumper:
         
         Args:
             self (Jumper): an instance of Jumper.
+        Returns:
+            string: multi-line string showing parachute attached to the body of the Jumper.
         """
         jumper = self._parachute + self._body
         
@@ -61,5 +66,7 @@ class Jumper:
         
         Args:
             self (Jumper): an instance of Jumper.
+        Returns:
+            bool: True if the player has any guesses remaining, false if otherwise.
         """
         return self._is_alive
